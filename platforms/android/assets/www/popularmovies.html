@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description"
+          content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+    <title>Muzik</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+
+    <!-- Custom CSS -->
+    <style>
+        .list-block .item-subtitle {
+            white-space: normal;
+        }
+
+        .list-block .item-text {
+            height: auto;
+        }
+
+        .item-example {
+            font-size: 15px;
+            white-space: normal;
+            border-left: 5px solid #eee;
+            padding: 0 0 0 15px;
+            margin-top: 10px;
+            margin: 10px 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Views-->
+<div class="views">
+<!-- Your main view, should have "view-main" class-->
+<div class="view view-main">
+<!-- Top Navbar-->
+<!-- /.aside -->
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through toolbar-through">
+<!-- Page, data-page contains page name-->
+<div data-page="index" class="page">
+<!-- Scrollable page content-->
+<div class="page-content pull-to-refresh-content">
+<!-- Pull to Refresh -->
+<div class="pull-to-refresh-layer">
+    <div class="preloader"></div>
+    <div class="pull-to-refresh-arrow"></div>
+</div>
+<!-- NAVBAR -->
+<section class="vbox">
+<header class="bg-black lter header header-md navbar navbar-fixed-top-xs">
+    <div class="navbar-header aside bg-success nav-xs">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+            <i class="icon-list"></i>
+        </a>
+        <a href="index.html" class="navbar-brand text-lt">
+            <i class="icon-earphones"></i>
+            <img src="images/logo.png" alt="." class="hide">
+            <span class="hidden-nav-xs m-l-sm">Muzikal</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+            <i class="icon-settings"></i>
+        </a>
+    </div>      <ul class="nav navbar-nav hidden-xs">
+    <li>
+        <a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
+            <i class="fa fa-indent text"></i>
+            <i class="fa fa-dedent text-active"></i>
+        </a>
+    </li>
+</ul>
+    <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
+        <div class="form-group">
+            <div class="input-group">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
+            </span>
+                <input type="text" class="form-control input-sm no-border rounded" placeholder="Search songs, albums...">
+            </div>
+        </div>
+    </form>
+    <div class="navbar-right ">
+        <ul class="nav navbar-nav m-n hidden-xs nav-user user">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="https://itsmuzikal.com/new/images/a0.png" alt="...">
+              </span>
+                    Welcome Guest <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu animated fadeInRight">
+                    <li>
+                        <span class="arrow top"></span>
+                        <a href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a href="/profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="badge bg-danger pull-right">3</span>
+                            Notifications
+                        </a>
+                    </li>
+                    <li>
+                        <a href="docs.html">Help</a>
+                    </li>
+                    <li class="divider"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<section>
+<section class="hbox stretch">
+<!-- .aside -->
+<aside class="bg-black dk nav-xs aside hidden-print" id="nav">
+<section class="vbox">
+<section class="w-f-md scrollable">
+<div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+
+
+
+<!-- nav -->
+<nav class="nav-primary hidden-xs">
+<ul class="nav bg clearfix">
+    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+        Discover
+    </li>
+    <li>
+        <a href="/index.html">
+            <i class="icon-disc icon text-success"></i>
+            <span class="font-bold">What's new</span>
+        </a>
+    </li>
+    <li>
+        <a href="/videos.html" class="external">
+            <i class="icon-social-youtube icon  text-primary"></i>
+            <span class="font-bold">Videos</span>
+        </a>
+    </li>
+    <li>
+        <a href="/downloads.html" class="external">
+            <i class="icon-cloud-download"></i>
+            <span class="font-bold">Downloads</span>
+        </a>
+    </li>
+</ul>
+<ul class="nav" data-ride="collapse">
+    <li>
+        <a href="#" class="auto">
+                                        <span class="pull-right text-muted">
+                                            <i class="fa fa-angle-right text"></i>
+                                        <i class="fa fa-angle-down text-active"></i>
+                                        </span>
+            <i class="fa fa-film"></i>
+            <span class="font-bold">Movies</span>
+        </a>
+        <ul class="nav dk text-sm">
+            <li>
+                <a href="/popularmovies.html" class="external">
+                    <i class="icon-star icon text-success-lter"></i>
+                    <span>Popular Movies</span>
+                </a>
+            </li>
+            <li>
+                <a href="/upcomingmovies.html" class="external">
+                    <i class="icon-arrow-up"></i>
+                    <span>Upcoming Movies</span>
+                </a>
+            </li>
+            <li>
+                <a href="/moviesnowplaying.html" class="external">
+                    <i class="fa fa-play"></i>
+                    <span>In Cinemas</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul class="nav" data-ride="collapse">
+    <li>
+        <a href="#" class="auto">
+                                        <span class="pull-right text-muted">
+                                            <i class="fa fa-angle-right text"></i>
+                                        <i class="fa fa-angle-down text-active"></i>
+                                        </span>
+            <i class="icon-camcorder"></i>
+            <span class="font-bold">TV Shows</span>
+        </a>
+        <ul class="nav dk text-sm">
+            <li>
+                <a href="/populartvshows.html" class="external">
+                    <i class="icon-star icon text-success-lter"></i>
+                    <span>Popular TV Shows</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tvshowsairingtoday.html" class="external">
+                    <i class="icon-arrow-up"></i>
+                    <span>Airing Today</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tvshowsairingnow.html" class="external">
+                    <i class="icon-feed"></i>
+                    <span>Airing Now</span>
+                </a>
+            </li>
+            <li>
+                <a href="/topratedtvshows.html" class="external">
+                    <i class="icon-fire"></i>
+                    <span>Top Rated</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul class="nav" data-ride="collapse">
+    <li >
+        <a href="#" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-angle-right text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+
+            <i class="icon-music-tone-alt icon text-info"></i>
+            <span class="font-bold">Genres</span>
+        </a>
+
+        <ul class="nav dk text-sm">
+            <li>
+                <a href="/genre.html?genre=blues" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Blues</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=country" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Country</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=easy" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Easy</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=electronic" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Electronic</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=folk" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Folk</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=hip-hop" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Hip-Hop</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=jazz" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Jazz</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=pop" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Pop</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=rhythm" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Rhythm</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=rock" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Rock</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=trance" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Trance</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=techno" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Techno</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=latin" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Latin</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=dubstep" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Dubstep</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=reggae" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>Reggae</span>
+                </a>
+            </li>
+            <li>
+                <a href="/genre.html?genre=rnb" class="external">
+                    <i class="icon-playlist icon text-success-lter"></i>
+                    <span>R&B</span>
+                </a>
+            </li>
+        </ul>
+    <li>
+        <a href="/songs.html" class="external">
+            <i class="icon-music-tone icon"></i>
+            <span class="font-bold">Songs</span></a>
+    </li>
+    <li>
+        <a href="/about.html" class="external" data-target="#content" data-el="#bjax-el" data-replace="true">
+            <i class="icon-info"></i>
+            <span class="font-bold">About</span>
+        </a>
+    </li>
+</ul>
+</nav>
+</div>
+</section>
+</section>
+</aside>
+
+<!--NAVBAR-->
+<!-- Div for Result -->
+<div id="content-wrap"></div>
+<!-- Template7 Template -->
+<script id="random-template" type="text/template">
+    <!-- yaha se dalna shuru -->
+    <!-- / side content -->
+    <section id="content">
+        <section class="hbox stretch">
+            <section>
+                <section class="vbox">
+                    <section class="scrollable padder-lg w-f-md" id="bjax-target">
+                        <a href="#" class="pull-right text-muted m-t-lg"
+                           data-toggle="class:fa-spin">
+                            <i class="icon-refresh i-lg  inline" id="refresh"></i></a>
+
+                        <h2 class="font-thin m-b">Popular Movies<span
+                                class="musicbar animate inline m-l-sm"
+                                style="width:20px;height:20px">
+                    <span class="bar1 a1 bg-primary lter"></span>
+                    <span class="bar2 a2 bg-info lt"></span>
+                    <span class="bar3 a3 bg-success"></span>
+                    <span class="bar4 a4 bg-warning dk"></span>
+                    <span class="bar5 a5 bg-danger dker"></span>
+                  </span></h2>
+                        <div class="row">
+                            {{#each results}}
+                                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <div class="item">
+                                        <div class="pos-rlt">
+                                            <div class="center text-center m-t-n">
+                                                <a href="/movie.html?movie={{id}}" class="external"></a>
+                                            </div>
+                                        </div>
+                                        <a href="/movie.html?movie={{id}}" class="external">
+                                            {{#if poster_path}}
+                                            <img src="https://image.tmdb.org/t/p/w185{{poster_path}}" class="r r-2x img-full">
+                                            {{else}}
+                                            <img src="https://itsmuzikal.com/new/movies/posters/Poster_not_available.jpg" class="r r-2x img-full">
+                                            {{/if}}
+                                        </a>
+                                    </div>
+                                    <div class="padder-v">
+                                        <a href="/movie.html?movie={{id}}" class="external text-ellipsis">{{title}}</a>
+                                        <a href="#" class="text-ellipsis text-xs text-muted">{{title}}</a>
+                                    </div>
+                                </div>
+                        </div>
+                        {{/each}}
+                        </div>
+                        </div>
+
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="js/popularmovies.js"></script>
+
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.js"></script>
+<!-- App -->
+<script src="js/app.js"></script>
+<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/app.plugin.js"></script>
+<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+<script type="text/javascript" src="js/jPlayer/demo.js"></script>
+</body>
+</html>
